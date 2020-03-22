@@ -1,28 +1,35 @@
 from bs4 import BeautifulSoup
+import bs4
 import urllib.request
 
 
+def get_soup_from_url(url: str = "https://www.pixar.com/feature-films/cars-3") -> bs4.BeautifulSoup:
+    """Your code here..."""
 
-with urllib.request.urlopen("https://www.pixar.com/feature-films/cars-3") as reply:
-    html = reply.read()  
-
-
-soup = BeautifulSoup(html)
-
-print(soup)
+    with urllib.request.urlopen(url) as reply:
+        html = reply.read()  
 
 
-links = []
+    soup = BeautifulSoup(html)
 
-links = soup.findAll("img")
-
-
-print("<********************************************************************************************************>")
-print("<********************************************************************************************************>")
-
-print(links)
+    print(soup)
 
 
-for link in links:
-    print(link.get("src"))       
+    links = []
+
+    links = soup.findAll("img")
+
+    print(links)
+
+
+    for link in links:
+        print(link.get("src"))       
+
+
+
+get_soup_from_url()
+        
+
+
+    #print(links)
 
