@@ -4,7 +4,6 @@ import urllib.request
 
 
 def get_soup_from_url(url: str = "https://www.pixar.com/feature-films/cars-3") -> bs4.BeautifulSoup:
-    """Your code here..."""
 
     with urllib.request.urlopen(url) as reply:
         html = reply.read()  
