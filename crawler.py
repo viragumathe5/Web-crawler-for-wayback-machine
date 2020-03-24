@@ -17,6 +17,6 @@ if __name__ == "__main__":
     print(links)
     print(f"\n<{'*' * 104}>\n")
     sources = [src for img in soup.find_all("img") if (src := img.get("src"))]
-    f"{len(sources) / len(links)*100:.2f}% of imgs have a src attribute."
+    f"{len(sources) / len(links) * 100:.2f}% of imgs have a src attribute."
     for i, src in enumerate(sources, 1):
         print(f"{i:>4}: {src}")
