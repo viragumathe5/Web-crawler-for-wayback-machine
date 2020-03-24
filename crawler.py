@@ -12,9 +12,11 @@ if __name__ == "__main__":
     soup = get_soup_from_url("https://www.pixar.com/feature-films/cars-3")
     print(soup)
     print(f"\n<{'*' * 104}>\n")
-    links = soup.findAll("img")
+    links = soup.find_all("img")
     print(f"\n<{'*' * 104}>\n")
     print(links)
     print(f"\n<{'*' * 104}>\n")
-    for link in links:
-        print(link.get("src"))
+    sources = [src for img in soup.find_all("img") if (src := img.get("src"))]
+    f"{len(sources) / len(links)*100:.2f}% of imgs have a src attribute."
+    for i, src in enumerate(sources, 1):
+        print(f"{i:>4}: {src}")
