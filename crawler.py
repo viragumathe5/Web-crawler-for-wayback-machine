@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 def get_soup_from_url(url: str) -> BeautifulSoup:
     with urlopen(url) as reply:
-        return(reply.read())
+        return BeautifulSoup(reply.read())
 
 
 if __name__ == "__main__":
