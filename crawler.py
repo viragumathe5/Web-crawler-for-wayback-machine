@@ -8,7 +8,7 @@ def get_soup_from_url(url: str) -> BeautifulSoup:
         return(reply.read())
 
 
-if __name__ == "__main__:
+if __name__ == "__main__":
     soup = get_soup_from_url("https://www.pixar.com/feature-films/cars-3")
     print(soup)
     print(f"\n<{'*' * 104}>\n")
