@@ -9,7 +9,7 @@ def get_banner() -> str:
 
 def get_soup_from_url(url: str) -> BeautifulSoup:
     with urlopen(url) as reply:
-        return BeautifulSoup(reply.read())
+        return BeautifulSoup(reply.read(), "html.parser")
 
 
 if __name__ == "__main__":
