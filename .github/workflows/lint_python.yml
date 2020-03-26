@@ -26,3 +26,4 @@ jobs:
       - run: pip install -r requirements.txt || true
       - run: pytest . || true
       - run: python crawler.py
+      - run: python news_crawler_dummy.py
