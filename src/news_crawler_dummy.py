@@ -1,4 +1,4 @@
-from .crawler import get_banner, get_soup_from_url
+from src.crawler import get_banner, get_soup_from_url
 
 if __name__ == "__main__":
     banner = get_banner()
