@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from crawler import get_banner, get_soup_from_url
 
 if __name__ == "__main__":
